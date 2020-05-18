@@ -64,6 +64,6 @@ Note: the requirements.txt contains many extraneous packages used in other proje
 
 stellargraph: https://pypi.org/project/stellargraph/<br />
 graphsage paper: https://arxiv.org/pdf/1706.02216.pdf<br />
-orbitfold: https://orbifold.net/default/using-graphsage-for-node-predictions/<br />
+graph node embeddings: https://github.com/stellargraph/stellargraph/blob/develop/demos/node-classification/graphsage-node-classification.ipynb<br />
 compartmental modeling: https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology <br />
 
