@@ -21,7 +21,15 @@ This is a 2-D projection of the same TSNE embedding:
 
 ![alt text][image_3]
 
+## Training 
 
+Accuracy and loss plots for the training dataset during the initial from scratch training:
+
+![alt text][image_1]
+
+### Dataset:
+
+The dataset consists of fictional contacts using the Cora dataset link data and the Covid19 vulnerability example feature data found here: https://github.com/closedloop-ai/cv19index
 
 ## Performance Analysis:
 
@@ -40,15 +48,7 @@ The following ROC curve shows the performance on test data for the infected, exp
 * Keras > 2.3
 * Opencv > 4.1.0
 
-## Training 
 
-Accuracy and loss plots for the training dataset during the initial from scratch training:
-
-![alt text][image_1]
-
-### Dataset:
-
-The dataset consists of fictional contacts using the Cora dataset link data and the Covid19 vulnerability example feature data found here: https://github.com/closedloop-ai/cv19index
 
 
 
