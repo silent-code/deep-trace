@@ -14,62 +14,23 @@ Deep-trace is a graph-based deep-learning neural net for contact tracing. Conven
 <br />
 
 This framework demonstrates:<br />
-- The use of combined cnn with autoencoder to classifiy uuv tracks  <br />
-- Unsupervised training using only the inlier class (uuv tracks)  <br />
+- The use of graph convnet  <br />
+- Semisupervised node training  <br />
 - Quality curated dataset for training <br />
 
 Further work: <br />
-- Extend inlier class to include uuv lawn mower turn segments (right now we only include straight path segments)
+- Extend inlier class to include 
 - Hyperparameter tuning
-- Analyze augmenting existing WQX SVM classifier with deep_track_ae classifications
+- Analyze augmenting existing data
 - Increase input image size for training to improve accuracy
 - Use k-folds averaging to increase ROC performance estimate reliability
 
 The repository contains:
 
-* Code for training (train.py) and testing performance (evaluate_performance.py) on wqx uuv track data
-* UUV track plot data is here: \\ead-fs1\Huge\Users\josseran\wqx_ml_deep_track_data
+* Code for training (train.py) and testing performance (evaluate_performance.py) on 
+* etc something
 
-## Installation
-
-### Clone this repo
-
-git clone gitlab@repositories.arlut.utexas.edu:wqx_ml/wqx_deep_track.git
-
-### Install virtualenv and opencv-contrib-python 
-
-#### Various OS:
-
-See [here](https://www.pyimagesearch.com/opencv-tutorials-resources-guides/): 
-
-#### For Mac OS simply pip install opencv-contrib-python
-
-See [here](https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/)
-
-### Install requirements
-
-pip install -r requirements.txt
-
-
-## Usage
-
-### Training:
-
-python train_unsupervised_autoencoder.py --dataset datasets/data_augmented3 --test_data_dir datasets/test_data_aug3 --model output/autoencoder_aug3.model --epochs 100
-
-
-### Evaluation:
-
-python evaluate_performance.py --dataset_dir datasets/test_data --model output/autoencoder.model --max_alert_rate 4
-
-## Method:
-
-Convolutional autoencoder flow:
-
-![alt text][image_6]
-
-Autoencoder anomaly detection is performed by calculating the mean-square-error between the input and reconstructed track plots. The upper flow diagram in the following image shows the 
-mse is high when the autoencoder is fed a track which deviates from a straight track (lower flow diagram):
+ed a track which deviates from a straight track (lower flow diagram):
 
 ![alt text][image_5]
 
@@ -116,7 +77,6 @@ Dataset track plot collage shows raw track plot input images for uuv tracks (str
 107 Targets<br />
 214 Non-targets<br />
 Tracker speed is filtered at 3 kn<br />
-Download data from: \\ead-fs1\Huge\Users\josseran\wqx_ml_deep_track_data
 
 ### Data directory structure:
 
@@ -149,7 +109,5 @@ The following data augmentation has been applied to increase the no of images in
 
 ***
 
-Tutorial on Keras autoencoders: https://www.pyimagesearch.com/2020/03/02/anomaly-detection-with-keras-tensorflow-and-deep-learning/
-
-Configuring Virtual Environment for Deep Learning: https://www.pyimagesearch.com/2018/09/19/pip-install-opencv/
+put refs here
 
