@@ -1,0 +1,32 @@
+
+
+******************************************************
+**************   Evalaluation Report   ***************
+******************************************************
+
+
+- Accuracy Score: 0.9041450777202072
+
+- Mean Absolute Error (MAE): 0.09585492227979274
+
+- Mean Squared Error (MSE): 0.09585492227979274
+
+- Area Under the Curve (AUC): 0.9453057476231633
+
+- Confusion Matrix:
+[[157  21]
+ [ 16 192]]
+
+- Normalized Confusion Matrix:
+[[0.88202247 0.11797753]
+ [0.07692308 0.92307692]]
+
+- Classification report:
+              precision    recall  f1-score   support
+
+       Other       0.91      0.88      0.89       178
+ Susceptible       0.90      0.92      0.91       208
+
+    accuracy                           0.90       386
+   macro avg       0.90      0.90      0.90       386
+weighted avg       0.90      0.90      0.90       386
