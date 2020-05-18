@@ -10,7 +10,7 @@
 
 # Graph-based deep-learning neural net for contact tracing
 
-Deep-trace is a graphsage-based deep-learning neural net for contact tracing. Conventional methods can only exploit knowledge of a person's contacts which is essentially a graph with nodes representing people and edges connecting contact between people. The proposed method allows us to utilize information stored in the graph contacts as well as node features. In this particular case we use the covid vulnerability index to assign a feature vector to each node. We are then able to learn the contact network based not only on the graph node and edgelist specification, but also the vulnerability feature mapping. Thus we create a three-dimensional node embedding for new contacts that shows an assessment of their likelihood of being in one of three exposure categories – Infected, Exposed or Susceptible. This low dimensional embedding allows contact tracing personnel to prioritize who they should contact and have test in cases where a pandemic is evolving too quickly under limited resources. One can quickly identify and prioritize which persons to contact and isolate.
+Deep-trace is a graphsage-based machine-learning pipeline for contact tracing. Conventional methods can only exploit knowledge of a person's contacts which is essentially a graph with nodes representing people and edges connecting contact between people. The proposed method allows us to utilize information stored in the graph contacts as well as node features. In this particular case we use the covid vulnerability index to assign a feature vector to each node. We are then able to learn the contact network based not only on the graph node and edgelist specification, but also the vulnerability feature mapping. Thus we create a three-dimensional node embedding for new contacts that shows an assessment of their likelihood of being in one of three exposure categories – Infected, Exposed or Susceptible. This low dimensional embedding allows contact tracing personnel to prioritize who they should prioritize to contact and test in situations where a pandemic is evolving too quickly under limited personnel and test resources. One can quickly identify and prioritize which persons to contact and isolate.
 <br />
 
 Figure below shows a TSNE projection of the data onto three dimensions for a simulated case study of 27 infected, 519 susceptible, and 419 exposed individuals:
@@ -29,7 +29,7 @@ Accuracy and loss plots for the training dataset during the initial from scratch
 
 ### Dataset:
 
-The dataset consists of fictional contacts using the Cora dataset link data and the Covid19 vulnerability example feature data found here: https://github.com/closedloop-ai/cv19index
+The dataset consists of fictional contacts using the Cora dataset link data and the Covid19 vulnerability example feature data found here: https://github.com/closedloop-ai/cv19index.
 
 ## Performance Analysis:
 
@@ -40,22 +40,30 @@ The following ROC curve shows the performance on test data for the infected, exp
 ![alt text][image_5]
 
 ![alt text][image_6]
+
+Confusion matrix for the susceptible class:
+![alt text][image_7]
+
 ## Critical Dependencies:
 
-* Graphsage
+* Stellargraph
+* Sklearn
 * Python3
 * Tensorflow  >= 2.0
 * Keras > 2.3
-* Opencv > 4.1.0
+* Pandas
 
+Using Anaconda:
+conda env create -f deep-trace.yml
 
-
-
-
+Note: the requirements.txt contains many extraneous packages used in other projects, so you won't need all of them.
 
 ## References
 
 ***
 
-put refs here
+stellargraph: https://pypi.org/project/stellargraph/
+graphsage paper: https://arxiv.org/pdf/1706.02216.pdf
+orbitfold: https://orbifold.net/default/using-graphsage-for-node-predictions/
+compartmental modeling: https://en.wikipedia.org/wiki/Compartmental_models_in_epidemiology 
 
