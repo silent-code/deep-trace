@@ -52,6 +52,7 @@ Confusion matrix for the susceptible class:
 ## Critical Dependencies:
 
 * Stellargraph
+* NetworkX
 * Sklearn
 * Python3
 * Tensorflow  >= 2.0
