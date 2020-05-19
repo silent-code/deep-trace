@@ -28,7 +28,7 @@ def plot_history(history):
         plt.legend(['train', 'test'], loc='upper right')
         plt.show()
 
-# Set the graph edgelist with the Cora target-source citation data
+# Set the graph edgelist with the target-source contact data
 data_dir = os.path.expanduser("./datasets/contacts")
 cora_location = os.path.expanduser(os.path.join(data_dir, "cct.contacts"))
 edgelist = pd.read_csv(os.path.join(data_dir, "cct.contacts"), sep='\t', header=None, names=["target", "source"])
