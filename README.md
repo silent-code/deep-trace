@@ -10,7 +10,7 @@
 
 # Existential Reason
 
-The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network for new contacts presented to the contact network. This is an open-source collaborative project for the betterment of society. UFTW.
+The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network for new contacts presented to the contact network. This is an open-source collaborative project for the betterment of society. Please constructively contribute. UFTW.
 
 # Graph-based Deep-Learning Network for Contact Tracing
 
