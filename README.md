@@ -8,18 +8,17 @@
 [image_6]: ./images/roc_curve_Susceptible.png
 [image_7]: ./images/confusion_matrix_Susceptible.png
 
-# Existential Reason
+# Motivation
 
-The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network for new contacts presented to the contact network. This is an open-source collaborative project for the betterment of society. Please constructively contribute. UFTW.
+The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network to predict the risk classification of novel contacts based on prior knowledge of contacts and a vulnerability measure. The resulting low-dimensional embedding of the grapsage output layer stack can reveal useful contact proximity information not be readily available based solely on contact lists or vulnerability data alone. 
 
-# Graph-based Deep-Learning Network for Contact Tracing
+# Introduction
 
 Deep-trace is a graphsage-based machine-learning pipeline for contact tracing. Conventional methods can only exploit knowledge of a person's contacts which is essentially a graph with nodes representing people and edges connecting contact between people. The proposed method allows us to utilize information stored in the graph contacts as well as node features. In this particular case we use the covid vulnerability index to assign a feature vector to each node. We are then able to learn the contact network based not only on the graph node and edgelist specification, but also the vulnerability feature mapping. Thus we create a three-dimensional node embedding for new contacts that shows an assessment of their likelihood of being in one of three exposure categories – Infected, Exposed or Susceptible. This low dimensional embedding allows contact tracing personnel to prioritize who they should prioritize to contact and test in situations where a pandemic is evolving too quickly under limited personnel and test resources. One can quickly identify and prioritize which persons to contact and isolate.
 <br />
-# How is this useful?
-Project a new contact into the embedding. The distance relationship into the colored relationships suggests their proximity to the infected group (red). Proximity is based not only only on the contact relationship (graph structure) but also the subject's feature vector (covid19 vulnerabilty index value). Thus contact tracing personnel can prioritize which individuals to contact. Essentially we are combining contact network information which is a graph network structure with tabular data (the covid19 vulnerablity index stored in a pandas dataframe format)
+#
 
-Figure below shows a TSNE projection of the data onto three dimensions for a simulated case study of 27 infected, 519 susceptible, and 419 exposed individuals:
+Figure 1 below shows a TSNE projection of the data onto three dimensions for a simulated case study of 27 infected, 519 susceptible, and 419 exposed individuals:
 
 ![alt text][image_2]
 
