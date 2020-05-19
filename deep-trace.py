@@ -29,10 +29,10 @@ def plot_history(history):
         plt.show()
 
 # Set the graph edgelist with the Cora target-source citation data
-data_dir = os.path.expanduser("./datasets/cora")
-cora_location = os.path.expanduser(os.path.join(data_dir, "cora.cites"))
-edgelist = pd.read_csv(os.path.join(data_dir, "cora.cites"), sep='\t', header=None, names=["target", "source"])
-edgelist["label"] = "cites"
+data_dir = os.path.expanduser("./datasets/contacts")
+cora_location = os.path.expanduser(os.path.join(data_dir, "cct.contacts"))
+edgelist = pd.read_csv(os.path.join(data_dir, "cct.contacts"), sep='\t', header=None, names=["target", "source"])
+edgelist["label"] = "contacts"
 g_nx = nx.from_pandas_edgelist(edgelist[0:1348], 'target', 'source')
 
 # Set each node attribute as the 'subject' data in the last field of the cora feature file
