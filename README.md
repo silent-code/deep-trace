@@ -10,7 +10,7 @@
 
 # Motivation
 
-The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network to predict the risk classification of novel contacts based on prior knowledge of contacts and a vulnerability measure. The resulting low-dimensional embedding of the grapsage output layer stack can reveal useful contact proximity information not be readily available based solely on contact lists or vulnerability data alone. 
+The goal of this repo is to demonstrate the use of the stellargraph implementation of the graphsage algorithm for graph node inference to develop a graph embedding from a learned covid19 contact network to predict the risk classification of novel contacts based on prior knowledge of contacts and a vulnerability measure. The resulting low-dimensional embedding of the grapsage output layer stack can reveal useful contact proximity information not readily available based solely on contact lists or vulnerability data alone. 
 
 # Introduction
 
